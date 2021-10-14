@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Лабораторная работа №1</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr class="laba"><td colspan="3"><p>Лабораторная работа №1</p></td></tr>
+    <tr class="stud">
+        <td class="name"><p>Курносова Ирина</p></td>
+        <td><p>P3231</p></td>
+        <td><p>Вариант: 31019</p></td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td class="left">
+            <form class="decor" method="get" action="new.php">
+                <div class="form-left-decoration"></div>
+                <div class="form-right-decoration"></div>
+                <div class="circle"></div>
+                <div class="form-inner">
+                    <h3>Введите значения</h3>
+                    <div class="input-c">
+                        <input type="text" name="x" id="x" onblur="test()" placeholder="Enter X (-3..5)">
+                        <p class="error_text" id="errorX"></p>
+                    </div>
+                    <div class="input-c">
+                        <input type="text" name="y" id="y" onblur="test()" placeholder="Enter Y (-5..5)">
+                        <p class="error_text" id="errorY"></p>
+                    </div>
+                    <div class="input-c">
+                        <p>
+                            Выберите R:
+                        </p>
+                        <select class="selectR" name="r" id="r">
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="2.5">2.5</option>
+                            <option value="3">3</option>
+                        </select>
+                        <span class="error_text" id="errorR"></span>
+                    </div>
+                    <div class="buttons">
+                        <button class="disabled_1" disabled submit>
+                            Проверить
+                        </button>
+                        <button class="submit" clear_table>
+                            Очистить
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <img src="https://i.ibb.co/Y2xWHpg/image.png">
+        </td>
+        <td colspan="2" class="right">
+            <table id="dtable">
+                <tbody id="answer_table">
+                <tr>
+                    <th><p>X</p></th>
+                    <th><p>Y</p></th>
+                    <th><p>R</p></th>
+                    <th><p>Время</p></th>
+                    <th><p>Выполнение</p></th>
+                    <th><p>Результат</p></th>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<script src="jquery-3.6.0.min.js" type="text/javascript"></script>
+<script src="scr.js" type="text/javascript"></script>
+</body>
+</html>

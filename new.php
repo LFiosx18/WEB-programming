@@ -10,14 +10,6 @@ $timeResponse = date("H:i:s");
 $answer = "";
 $error_msg = "";
 
-//calculation
-if (($x >= 0 && $y >= 0 && $y <= $r/2 && $x<=$r) ||
-    ($x <= 0 && $y >= 0 && $y <= sqrt($r*$r - $x*$x)) ||
-    ($x >= 0 && $y <= 0 && $y >= $x*2-$r)) {
-    $answer = "Yes";
-}else{
-    $answer = "No";
-}
 //checking
 if (!is_null($r) && !is_null($x) && !is_null($y)) {
     if ($r == 0 && $x == 0 && $y == 0) {
@@ -44,6 +36,13 @@ if (!is_null($r) && !is_null($x) && !is_null($y)) {
         print_r('<tr><td><p>'.$error_msg.'<p></td></tr>');
     }
     else {
+        if (($x >= 0 && $y >= 0 && $y <= $r/2 && $x<=$r) ||
+            ($x <= 0 && $y >= 0 && $y <= sqrt($r*$r - $x*$x)) ||
+            ($x >= 0 && $y <= 0 && $y >= $x*2-$r)) {
+            $answer = "Yes";
+        }else{
+            $answer = "No";
+        }
         print_r('<tr>
                         <td><p>' . $x . '</p></td>
                         <td><p>' . $y . '</p></td>
@@ -54,3 +53,4 @@ if (!is_null($r) && !is_null($x) && !is_null($y)) {
                         </tr>');
     }
 }
+

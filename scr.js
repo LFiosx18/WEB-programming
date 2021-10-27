@@ -2,15 +2,24 @@ var x = document.getElementById("x");
 var r = document.getElementById("r");
 var y = document.getElementById("y");
 
+
+
 function testNum(n, min, max) {
-    let check = true;
-    try {
-        check = n.value > min && n.value < max;
-    }catch (e){
+    n.value=n.value.replace(",", ".");
+    let check;
+    if (n.value>min && n.value<max && n.value.trim() != null) {
+        if (/^(0$|-?[1-9]\d*(\.\d*[1-9]$)?|-?0\.\d*[1-9])$/.test(n.value)) {
+            check = true;
+        }
+        else {
+            check = false;
+        }
+    }
+    else {
         check = false;
     }
     if (!check){
-        $(n).parent().find(".error_text").html("Введите значение из диапазона!");
+        $(n).parent().find(".error_text").html("Введите значение из диапазона, без пробелов и прочих символов!");
     }
     else {
 

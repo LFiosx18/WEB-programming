@@ -9,8 +9,8 @@
       <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
       <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:orbis"/>
 
-      <property name="javax.persistence.jdbc.user" value="s340617" />
-      <property name="javax.persistence.jdbc.password" value="bxs346" />
+      <property name="javax.persistence.jdbc.user" value="username" />
+      <property name="javax.persistence.jdbc.password" value="password" />
 
       <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
 
